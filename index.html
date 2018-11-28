@@ -36,10 +36,10 @@
         <div class= "row mt-3">
            <div class= "col-md-4">
                <div id= "" class="card">
-                  <h3 class="card-header">Number To Match</h3>
+                  <h3 class="card-header">Number To Guess</h3>
                     <div class="card-body">
                        <div class="text-center">
-                          <h1><span class="total score number"></span>0</h1>
+                          <h1><span id="targetnumber"></span></h1>
                        </div>
                    </div>
                </div>
@@ -58,28 +58,26 @@
         </div>
               
         <!-- Crystal Images Row -->
-        <div class= "row mt-3">
-           <div class= "col-md-2">
-              <!-- 1st crystal image -->
-              <img class= "crystal-image img-thumbnail img-fluid" 
-              src= "assets/images/crystal1.jpg" alt="crystals">
-           </div>
-           <div class= "col-md-2">
+        <div class= "crystals row mt-4">
+                <!-- 1st crystal image -->
+              <div class= "col-md-2">
+                  <img class= "crystal-image img-fluid image-thumbnail " src= "assets/images/crystal1.jpg" data-crystalvalue= "10">
+              </div>
               <!-- 2nd crystal image -->
-              <img class= " crystal-image img-thumbnail img-fluid"
-                src= "assets/images/crystal2.jpg" alt="crystals">
-           </div>
-           <div class= "col-md-2">
+              <div class= "col-md-2">
+                  <img class= "crystal-image img-fluid image-thumbnail " src= "assets/images/crystal2.jpg" data-crystalvalue= "5">
+                </div>
               <!-- 3rd crystal image -->
-              <img class= "crystal-image img-thumbnail img-fluid" src= "assets/images/crystal3.jpg" alt="crystals">
-           </div>
-           <div class= "col-md-2">
+              <div class= col-md-2>
+                  <img class= "crystal-image img-fluid image-thumbnail" src= "assets/images/crystal3.jpg"  data-crystalvalue= "3">
+            </div>
               <!-- 4th crystal image -->
-              <img class= "crystal-image img-thumbnail img-fluid" src= "assets/images/crystal4.jpg" alt="crystals">
-           </div>
-           <div class= "col-md-4">
-              <!-- empty -->
-           </div>
+              <div class= "col-md-2">
+                  <img class= "crystal-image img-fluid image-thumbnail" src= "assets/images/crystal4.jpg" data-crystalvalue= "7">
+                </div>
+                <div class= col-md-4>
+
+                </div>
         </div>
         
         <!-- Total Score Box -->
