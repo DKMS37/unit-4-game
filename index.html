@@ -2,101 +2,96 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name= "viewport" content= "width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Simple Crystal Game</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Bootstrap File -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <!-- Here we added a link to the jQuery library -->
   <script type="text/javascript" 
-  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  </script>
+
 </head>
-<body>
+
+<body style="background-image: url(https://wallpaper-house.com/data/out/6/wallpaper2you_113527.jpg)">
   <div class= "container">
-        <div class= "text-center">
-          <h1>
+        <div class= "text-center mt-4">
+          <h1 style="color:blue">
+            <!-- Game Name -->
              <strong>Crystal Collector</strong>
           </h1>
         </div>
 
-        <div class= "jumbotron">
-          <div class= "col-lg-6">
+        <div class= "container">
+           <div class= "col-md-12 text-center shrink-to-fit">
                <!-- instructions how to play the game -->
-               <p>You will be given a random number at the start of the game.</p></br>
-               <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p></br>
-               <p>You win the game by matching your total score to random number, You lose the game if your total score goes above the random number.</p></br>
-               <p>The value of each crystal is hidden from you until you click on it.</p></br>
-              <p>Each time when the game starts, the game will change the value of each crystal.</p>
-         </div>
-         <div class= "col-lg-6">
-             <!-- empty -->
-         </div>
+               <strong><p style="color:whitesmoke">You will be given a random number at the start of the game.
+               There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p></strong>
+               <strong><p style="color:lightblue">You win the game by matching your total score to random number, You lose the game if your total score goes above the random number.
+                The value of each crystal is hidden from you until you click on it.</p></strong>
+               <strong><p style="color:cornsilk">Each time when the game starts, the game will change the value of each crystal.</p></strong>
+           </div>
         </div>
 
-        <!-- Number to Match Box and Win & Loses Counter -->
-        <div class= "row mt-3">
-           <div class= "col-md-4">
-               <div id= "" class="card">
-                  <h3 class="card-header">Number To Guess</h3>
-                    <div class="card-body">
-                       <div class="text-center">
-                          <h1><span id="targetnumber"></span></h1>
-                       </div>
-                   </div>
-               </div>
-           </div>
-           <div class= "col-md-2">
-              <!-- wind box -->
-              <h3>Wins: <span id= "wins" style="color:green">0</span></h3>
-           </div>
-           <div class= "col-md-2">
-              <!-- loses box -->
-              <h3>Losses: <span id= "losses" style="color:red">0</span></h3>
-           </div>
-           <div class= "col-md-4">
-              <!-- empty -->
-           </div>
-        </div>
-              
-        <!-- Crystal Images Row -->
-        <div class= "crystals row mt-4">
-                <!-- 1st crystal image -->
-              <div class= "col-md-2">
-                  <img class= "crystal-image img-fluid image-thumbnail " src= "assets/images/crystal1.jpg" data-crystalvalue= "10">
+        <div class= "container">
+          <!-- Number to Match Box and Win & Loses Counter -->
+           <div class= "row mt-3">
+               <div class= "col-md-4">
+                   <div class="card">
+                       <h3 style= "color:firebrick" class= "card-header text-center">Number To Guess</h3>
+                        <div class="card-body">
+                          <div class="text-center">
+                             <h1><span id="targetnumber"></span></h1>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+              <div class= "col-md-4">
+                  <!-- wind box -->
+                  <h1 style="color:chartreuse">Wins: <span id= "wins" style="color:chartreuse"></span></h1>
               </div>
-              <!-- 2nd crystal image -->
-              <div class= "col-md-2">
-                  <img class= "crystal-image img-fluid image-thumbnail " src= "assets/images/crystal2.jpg" data-crystalvalue= "5">
-                </div>
-              <!-- 3rd crystal image -->
-              <div class= col-md-2>
-                  <img class= "crystal-image img-fluid image-thumbnail" src= "assets/images/crystal3.jpg"  data-crystalvalue= "3">
-            </div>
-              <!-- 4th crystal image -->
-              <div class= "col-md-2">
-                  <img class= "crystal-image img-fluid image-thumbnail" src= "assets/images/crystal4.jpg" data-crystalvalue= "7">
-                </div>
-                <div class= col-md-4>
-
-                </div>
-        </div>
-        
-        <!-- Total Score Box -->
-        <div class= "row ml-1 mt-3 mb-4">
-           <div class= "col=md-4">
-               <div id= "" class="card">
-                   <h3 class="card-header">Your Total Score Is</h3>
-                   <div class="card-body">
-                       <div class="text-center">
-                          <h1><span id= "counter"></span></h1>
-                       </div>
+              <div class= "col-md-4">
+                  <!-- loses box -->
+                  <h1 style="color:crimson">Losses: <span id= "losses" style="color:crimson"></span></h1>
+              </div>
+            </div> 
+           <!-- Crystal Images Row -->
+           <div class="row mt-4" id= "crystals">
+                  <!-- 1st crystal image -->
+              <div class= "col-sm-3">
+                  <img class= "crystal-image crystal-1 img-fluid image-thumbnail" src= "assets/images/crystal3.png" data-crystalvalue="10" alt="crystal1">
+              </div>
+                  <!-- 2nd crystal image -->
+              <div class= "col-sm-3">
+                   <img class= "crystal-image crystal-2 img-fluid image-thumbnail" src= "assets/images/crystal1.png" data-crystalvalue="5" alt="crystal2">
+              </div>
+                  <!-- 3rd crystal image -->
+              <div class= "col-sm-3 ">
+                   <img class= "crystal-image crystal-3 img-fluid image-thumbnail" src= "assets/images/crystal4.png" data-crystalvalue="3" alt="crystal3">
+              </div>
+                  <!-- 4th crystal image -->
+              <div class= "col-sm-3">
+                  <img class= "crystal-image crystal-4 img-fluid image-thumbnail" src= "assets/images/crystal2.png" data-crystalvalue="7" alt="crystal4">
+              </div>
+           </div>
+           <!-- Total Score Box -->
+           <div class= "row mt-3 mb-4">
+               <div class= "col-md-4">
+                   <div id= "" class="card">
+                       <h3 style="color:firebrick" class="card-header">Your Total Score Is</h3>
+                       <div class="card-body">
+                           <div class="text-center">
+                             <h1><span id= "counter"></span></h1>
+                          </div>
+                      </div>
                    </div>
                </div>
-           </div>
-           <div class= "col-md-8">
-              <!-- empty -->
-           </div>
-        </div>
-
+               <div class= "col-md-8">
+                  <!-- empty -->
+               </div>
+            </div> 
+       </div>
    </div>
  
 
