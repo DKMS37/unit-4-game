@@ -44,6 +44,7 @@ $(".crystal-image").on("click", function(){
 }
      
 });
+
 $(".crystal-1").on("click", function(){
     $(".crystal-1").animate({opacity: "0.4"});
     $(".crystal-1").animate({opacity: "1"});   
